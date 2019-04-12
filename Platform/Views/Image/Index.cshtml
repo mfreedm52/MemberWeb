@@ -1,0 +1,27 @@
+﻿@model List<MemberDatabase.File>
+
+<link href="~\content\pagedlist.css" rel="stylesheet" />
+
+<h2>Photo Gallary</h2>
+@{
+    ViewBag.Title = "Images";
+}
+
+        <ul class="list-inline">
+    @foreach (var item in Model)
+    {
+        <li class="item">
+            <img src="@item.FilePath" class="img-thumbnail" width="120" />
+            <span>@item.Description</span>
+
+        </li>
+
+    }
+</ul>
+
+@using (Html.BeginForm("Index", "Image", FormMethod.Get))
+{
+    <p>
+        @Html.ActionLink("Add Photo", "Add")
+    </p>
+}

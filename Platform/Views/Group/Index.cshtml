@@ -1,0 +1,56 @@
+﻿@model List<MemberDatabase.Group>
+
+<link href="~\content\pagedlist.css" rel="stylesheet" />
+
+<h2>Groups</h2>
+@{
+    ViewBag.Title = "Groups";
+}
+@using (Html.BeginForm("Index", "Group", FormMethod.Get))
+{
+   <p>
+        @Html.ActionLink("Add Group", "Add")
+    </p>
+}
+
+@using (@Html.BeginForm("Index", "Group"))
+{
+    <table>
+        <tr>
+            <th>
+                Group Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Group Members
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="240px">
+                    @Html.DisplayFor(groupItem => item.GroupName)
+                </td>
+                <td width="240px">
+                    @Html.DisplayFor(groupItem => item.GroupDescription)
+                </td>
+                <td width="240px">
+                    @item.Members.Count().ToString()
+                </td>
+                <td width="240px">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.GroupId })  |
+                    @Html.ActionLink("View", "View", new  { id = item.GroupId }) 
+
+                </td>
+            </tr>
+
+
+        }
+
+    </table>
+
+    
+}

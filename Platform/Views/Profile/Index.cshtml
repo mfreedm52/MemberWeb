@@ -1,0 +1,70 @@
+﻿@model MemberDatabase.Member
+@{
+    ViewBag.Title = "Add";
+}
+<h2>Edit Profile</h2>
+
+@using (Html.BeginForm("Add", "Contact", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <h3>List Serves</h3>
+    <div class="form-group">
+        <label id="lblTeam" class="col-md-2 control-label">Team</label>
+        <div class="col-md-10">
+            @Html.CheckBox("Team", true)
+        </div>
+    </div>
+    <div class="form-group">
+        <label id="lblPhilanthropy" class="col-md-2 control-label">Philanthropy</label>
+        <div class="col-md-10">
+            @Html.CheckBox("Philanthropy", true)
+        </div>
+    </div>
+    <div class="form-group">
+        <label id="lblEvents" class="col-md-2 control-label">Events</label>
+        <div class="col-md-10">
+            @Html.CheckBox("Events", true)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Add Contact" />
+        </div>
+    </div>
+
+
+
+
+}
+<script>
+
+
+</script>

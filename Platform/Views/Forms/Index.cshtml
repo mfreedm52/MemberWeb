@@ -1,0 +1,55 @@
+﻿@model MemberDatabase.Member
+@{
+    ViewBag.Title = "Make Payments";
+}
+<div class="wrapper">
+    <div class="checkout container">
+
+        <header>
+            <h1>Payments</h1>
+        </header>
+
+
+        <div class="col-md-4">
+            <h2>Pay Yearly dues</h2>
+            <p>Yearly dues will be $80. This can be done by making a venmo payment or check to our treasurer.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Quarterly Dues Subscription</h2>
+            <p>
+                If you would prefer to have your payments be done quarterly, You may sign up below to pay $20 per quarter.
+                You will be charged every 3 months until year end. You may request to cancel at any time.
+            </p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="VRSF8VK3VTM7A">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="checkout container">
+        <div class="col-md-4">
+            <h2>Make One Time Donation</h2>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="R4Y4TH58GT9BC">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<script src="~/Scripts/jquery.lettering-0.6.1.min.js"></script>
+<script src="~/Scripts/demo.js"></script>
+<script>
+
+
+
+
+</script>

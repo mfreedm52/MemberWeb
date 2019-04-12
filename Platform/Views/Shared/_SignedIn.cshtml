@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Calendar", "Calendar", "Home")</li>
+            
+            <li>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Directory
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        @Html.ActionLink("View Contacts", "Index", "Contacts")
+                    </li>
+                    <li>
+                        @Html.ActionLink("View Members", "Index", "Members")
+                    </li>
+                    <li>
+                        @Html.ActionLink("View Administrators", "Admin", "Contacts")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Groups", "Index", "Group")
+                    </li>
+                    <li>
+                        @Html.ActionLink("View Photos", "Index", "Image")
+                    </li>
+                </ul>
+                
+            </li>
+            <li>@Html.ActionLink("View Documents", "Index", "Document")</li>
+        </ul>
+
+   
+}
+else
+{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+    </ul>
+}

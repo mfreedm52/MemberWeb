@@ -1,0 +1,28 @@
+﻿@model MemberDatabase.File
+@{
+    ViewBag.Title = "Upload Photo";
+}
+<style>
+    table, td, th {
+        border: 1px solid green;
+        border-collapse: collapse;
+    }
+
+    th {
+        border: 1px solid black;
+        background-color: green;
+        color: white;
+    }
+</style>
+<h2>Basic File Upload</h2>
+@using (Html.BeginForm("UploadPhoto",
+                                                "Image",
+                                                FormMethod.Post,
+                                                new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload Photo:</label>
+    <input type="file" name="file" id="file" /><br><br>
+    <input type="submit" value="Upload Photo" />
+    <br><br>
+    @ViewBag.Message
+}

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform", "Platform\Platform.csproj", "{68B12303-EE89-4101-9F3E-1C294C7E2548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberDatabase", "MemberDatabase\MemberDatabase.csproj", "{69012DF7-99F6-4C02-A9A7-25D573603E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberTester", "MemberTeseter\MemberTester.csproj", "{077D69F6-0247-4279-A466-637524813AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "MikesUtils\Utility.csproj", "{8C7F0C53-3146-4C49-95B4-56EF43674607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericRepository", "GenericRepository\GenericRepository.csproj", "{4DDCE156-E43B-47AF-95CB-252101A5A987}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9392BDAE-D57A-42DC-8CB6-01EB012CF799}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B12303-EE89-4101-9F3E-1C294C7E2548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B12303-EE89-4101-9F3E-1C294C7E2548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B12303-EE89-4101-9F3E-1C294C7E2548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B12303-EE89-4101-9F3E-1C294C7E2548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69012DF7-99F6-4C02-A9A7-25D573603E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69012DF7-99F6-4C02-A9A7-25D573603E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69012DF7-99F6-4C02-A9A7-25D573603E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69012DF7-99F6-4C02-A9A7-25D573603E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077D69F6-0247-4279-A466-637524813AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077D69F6-0247-4279-A466-637524813AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077D69F6-0247-4279-A466-637524813AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077D69F6-0247-4279-A466-637524813AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7F0C53-3146-4C49-95B4-56EF43674607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7F0C53-3146-4C49-95B4-56EF43674607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7F0C53-3146-4C49-95B4-56EF43674607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7F0C53-3146-4C49-95B4-56EF43674607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDCE156-E43B-47AF-95CB-252101A5A987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDCE156-E43B-47AF-95CB-252101A5A987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDCE156-E43B-47AF-95CB-252101A5A987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDCE156-E43B-47AF-95CB-252101A5A987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFA11EF3-8EC3-4E37-A7EE-05FC9A600768}
+	EndGlobalSection
+EndGlobal

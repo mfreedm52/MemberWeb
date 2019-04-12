@@ -1,0 +1,64 @@
+﻿@model List<MemberDatabase.File>
+@{
+    ViewBag.Title = "Documents";
+}
+
+<h2>View Documents</h2>
+@{
+    @Html.Raw(ViewBag.Message);
+}
+<style>
+
+    table {
+    border: 1px solid black;
+}
+ 
+       th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+</style>
+<table>
+    <tr>
+        <th>
+            Description
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Path
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td width="240px">
+                @Html.DisplayFor(i => item.Description)
+            </td>
+            <td width="240px">
+                @Html.DisplayFor(i => item.FileType)
+            </td>
+            <td width="300px">
+                @Html.DisplayFor(i => item.FilePath)
+            </td>
+            <td width="240px">
+                @Html.ActionLink("Download", "Download") |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FileId })
+            </td>
+        </tr>
+
+
+    }
+
+</table>
+
+<br />
+
+@Html.Partial("FileUpload")

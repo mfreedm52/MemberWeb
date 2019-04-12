@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../MemberDatabase/MemberDatabase.csproj",
+      "bin": {
+        "assembly": "../../MemberDatabase/obj/{configuration}/MemberDatabase.dll",
+        "pdb": "../../MemberDatabase/obj/{configuration}/MemberDatabase.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.3"
+      }
+    }
+  }
+}
