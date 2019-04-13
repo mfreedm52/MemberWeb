@@ -36,7 +36,7 @@ namespace Platform.Filters
             //var projectName = HttpContext.Current.ApplicationInstance.GetType().Assembly.GetName().Name;
 
             //TODO find out how to get assembly exact to use in Logging.log function 
-            MikesUtils.Logging.Log(description, "Platform");
+            Utility.Logging.Log(description, "Platform");
 
         }
 	}

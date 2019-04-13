@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using Braintree;
+using Utility;
 using Platform.App_Code;
 
 namespace Platform.Controllers
@@ -79,7 +80,7 @@ namespace Platform.Controllers
                     errorMessages += "Error: " + (int)error.Code + " - " + error.Message + "\n";
                 }
 
-                MikesUtils.Logging.Log(errorMessages, "PaymentController");
+                Utility.Logging.Log(errorMessages, "PaymentController");
                 TempData["Flash"] = errorMessages;
                 return RedirectToAction("Index");
             }
@@ -99,7 +100,7 @@ namespace Platform.Controllers
             }
             catch (FormatException e)
             {
-                MikesUtils.Logging.Log("Error: 81503: Amount is an invalid format.", "PaymentController");
+                Utility.Logging.Log("Error: 81503: Amount is an invalid format.", "PaymentController");
                 TempData["Flash"] = "Error: 81503: Amount is an invalid format.";
                 return RedirectToAction("New");
             }
@@ -129,7 +130,7 @@ namespace Platform.Controllers
                     errorMessages += "Error: " + (int)error.Code + " - " + error.Message + "\n";
                 }
 
-                MikesUtils.Logging.Log(errorMessages, "PaymentController");
+                Utility.Logging.Log(errorMessages, "PaymentController");
                 TempData["Flash"] = errorMessages;
                 return RedirectToAction("New");
             }
@@ -154,7 +155,7 @@ namespace Platform.Controllers
                 var message = "Your test transaction has a status of " + transaction.Status + ". See the Braintree API response and try again.";
 
                 TempData["message"] = message;
-                MikesUtils.Logging.Log(message, "PaymentController");
+                Logging.Log(message, "PaymentController");
 
             };
 

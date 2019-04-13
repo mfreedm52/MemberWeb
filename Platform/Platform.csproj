@@ -383,7 +383,7 @@
       <Project>{69012df7-99f6-4c02-a9a7-25d573603e0c}</Project>
       <Name>MemberDatabase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MikesUtils\Utility.csproj">
+    <ProjectReference Include="..\Utility\Utility.csproj">
       <Project>{8c7f0c53-3146-4c49-95b4-56ef43674607}</Project>
       <Name>Utility</Name>
     </ProjectReference>
